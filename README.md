@@ -9,6 +9,7 @@ Spark ETL Pipeline to extract Spotify data daily and create a DB using AWS and S
 **Data Understanding:**
 
 **Input Data**: Spotify top 50 viral songs in India region.
+
 **Output data**: Three Snowflake tables:
 1. song_table (columns: SONG_ID, SONG_NAME, SONG_DURATION_MS, SONG_URL, ARTIST_ID, ALBUM_ID, LOAD_DATE)
 2. album_table (columns: ALBUM_ID,ALBUM_NAME, ALBUM_RELEASE_DATE, DURATION_MS, TOTAL_TRACKS, ALBUM_URL,LOAD_DATE)
