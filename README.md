@@ -1,12 +1,12 @@
 # Spotify_spark_etl
 Spark ETL Pipeline to extract Spotify data daily and create a DB using AWS and Snowflake.
 
-Tools:
+**Tools:**
 1. Spotify Developer Dashboard: To get the Spotify API client_id and client_secret(this is required to extract data from Spotify website) [Link](https://developer.spotify.com/dashboard)
 2. AWS(S3, Glue, Lambda, CloudWatch, IAM) : For Extract, Transform and Load the data.
 3. Snowflake: To maintain database.
 
-Data Understanding:
+**Data Understanding:**
 
 **Input Data**: Spotify top 50 viral songs in India region.
 **Output data**: Three Snowflake tables:
@@ -14,7 +14,7 @@ Data Understanding:
 2. album_table (columns: ALBUM_ID,ALBUM_NAME, ALBUM_RELEASE_DATE, DURATION_MS, TOTAL_TRACKS, ALBUM_URL,LOAD_DATE)
 3. artist_table (columns: ARTIST_ID, ARTIST_NAME, ARTIST_URL, LOAD_DATE)
 
-Steps:
+**Steps:**
 1. **Extract**: Get the data using Spotipy library in AWS Lambda. This data will be in json format and will be extracted daily(using CloudWatch trigger).
 2. Save this extracted data to a S3 location.
 3. **Transform**: This saved data will be transformed using AWS Glue. Create a daily schedule. This transformation will give us the data in the required structured format(or tables).
