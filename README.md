@@ -7,6 +7,7 @@ Tools:
 3. Snowflake: To maintain database.
 
 Data Understanding:
+
 **Input Data**: Spotify top 50 viral songs in India region.
 **Output data**: Three Snowflake tables:
 1. song_table (columns: SONG_ID, SONG_NAME, SONG_DURATION_MS, SONG_URL, ARTIST_ID, ALBUM_ID, LOAD_DATE)
